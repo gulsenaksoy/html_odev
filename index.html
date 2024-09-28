@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Blog</title>
+    <link rel="stylesheet" href="awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css_js/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+        /* Arka plan rengi ayarlari */
+        body {
+            background-color: #f2dfda;
+        }
+
+        /* Basligin ayarlari */
+        h1 {
+            margin-top: 5px;
+            background-color: rgba(201, 165, 173, 0.473);
+            color: brown;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-bottom: -10px;
+            padding-top: -10px;
+        }
+
+        /* Footer ayarlari */
+        .footer-content {
+            height: 75px;
+            background-color: #d2c0c8;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+        }
+
+        /* Navigation bar ayarlari */
+        ul {
+
+            list-style-type: none;
+            width: 100%;
+            margin-right: 4px;
+            background-color: rgba(201, 165, 173, 0.473);
+        }
+
+        /* Navigation bar icerisinde bulunan Home, Accounts, Contact, Projects ayarlari */
+        ul li {
+            display: inline-block;
+            float: none;
+            padding: 15px;
+            padding-right: 100px;
+            margin-right: 31px;
+            margin-left: -35px;
+            transition: background-color 0.7s;
+        }
+
+        ul li:hover {
+            background-color: burlywood;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: brown;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+
+        ul li a:hover {
+            color: darkred;
+            text-decoration: none;
+        }
+
+        /* Account bilesenleri ayarlari */
+        #account-content {
+            position: absolute;
+            z-index: 1;
+            display: none;
+            margin-top: 15px;
+            margin-left: -15px;
+            padding-right: 100px;
+        }
+
+        .accounts-li:hover #account-content {
+            display: block;
+
+        }
+
+        /* Contact bilesenleri ayarlari */
+        #contacts-content {
+            position: absolute;
+            z-index: 1;
+            display: none;
+            margin-top: 15px;
+            margin-left: -15px;
+            padding-right: 100px;
+        }
+
+        .contacts-li:hover #contacts-content {
+            display: block;
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+
+        }
+
+        /* Ana yerlesim alani icin Flexbox kullanimi */
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* Kart ve video boyutlari */
+        .card {
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-video {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px 8px 0 0;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- Baslik -->
+    <h1 style="text-align: center; font-weight: bold;">My Personal Blog</h1>
+
+    <!-- Navigation Bar -->
+    <ul>
+        <li><a href="http://127.0.0.1:5500/index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+
+        <!-- Accounts ve Bilesenleri -->
+        <li class="accounts-li">
+            <a href="#"><i class="fa-solid fa-laptop"></i> Accounts</a>
+            <div id="account-content">
+                <ul style="width: 212px;">
+                    <li style="display: block; margin-right: 0px; margin-left: -40px;"><a
+                            href="https://github.com/gulsenaksoy" target="_blank">GitHub</a>
+                    </li>
+
+                    <li style="display: block; margin-right: 0px; margin-left: -40px"><a
+                            href="https://muhendislik.sdu.edu.tr/bilmuh" target="_blank">SDU</a>
+                    </li>
+
+                    <li style="display: block; margin-right: 0px; margin-left: -40px"><a
+                            href="https://independent.academia.edu/G%C3%BCl%C5%9FenAksoy3/Network?tab=followers"
+                            target="_blank">Academia</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+        <!-- Contact ve Bilesenleri -->
+        <li class="contacts-li">
+            <a href="#"><i class="fa-solid fa-address-card"></i> Contact</a>
+            <div id="contacts-content">
+                <ul style="width: 197px;">
+                    <li style="display: block; margin-right: 0px; margin-left: -40px;"><a
+                            href="https://www.google.com/intl/tr/gmail/about/" target="_blank">Gmail</a>
+                    </li>
+
+                    <li style="display: block; margin-right: 0px; margin-left: -40px"><a
+                            href="https://www.google.com.tr/?hl=tr" target="_blank">Phone</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+        <li><a href="#"><i class="fa-solid fa-diagram-project"></i> Projects</a></li>
+    </ul>
+
+    <!-- Resimlerin bulundugu cardlar -->
+    <div class="container" style="margin-top: 50px ;">
+        <div class="row">
+            <div class="col-sm">
+                <div class="card">
+                    <img src="src/picture1.jpg" class="card-img-top" alt="Image not found">
+                    <div class="card-body">
+                        <p class="card-text" style="font-size: 13px;">
+                            The sakura tree blooms in spring, symbolize beauty and renewal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm">
+                <div class="card">
+                    <img src="src/picture2.jpeg" class="card-img-top" alt="Image not found">
+                    <div class="card-body">
+                        <p class="card-text" style="font-size: 13px;">Butterflies symbolize transformation, beauty, and
+                            the cycle of life.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm">
+                <div class="card">
+                    <img src="src/picture3.jpg" class="card-img-top" alt="Image not found">
+                    <div class="card-body">
+                        <p class="card-text" style="font-size: 13px;">The pink rose represents love, gratitude,
+                            admiration, and deep affection.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Video ve Tanitim Alani -->
+    <div class="container">
+        <div class="row" style="margin-top: 20px; margin-bottom: 20px;">
+            <div class="col-sm">
+                <div class="card">
+                    <video class="card-video" controls>
+                        <source src="src/sunset.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
+                </div>
+            </div>
+
+
+            <div class="col-sm">
+                <div class="card">
+                    <div class="card-body">
+
+                        <p class="card-text" style="font-size: 13px;">Hello, I'm Gülşen Aksoy. I'm a 3rd year student
+                            of Suleyman Demirel University Computer Engineering. I'm working in the fields of web
+                            development,
+                            Artificial Intelligence and improving myself by taking various courses on these subjects. So
+                            far, I have taken part in projects in these fields and gained hands-on experience. I aim to
+                            sign innovative projects using these technologies in the future. I am working to further
+                            myself in this field with my programming, problem solving and continuous learning skills .
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-content">
+        <br>
+        <p> <b>©️ 2024 All Rights Reserved </b>| Gülşen Aksoy | Number: 2211012005 </p>
+    </footer>
+
+    <script src="css_js/bootstrap.min.js"></script>
+</body>
+
+</html>
