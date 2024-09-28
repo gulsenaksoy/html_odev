@@ -98,12 +98,18 @@
             display: block;
         }
 
-        .video-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 20px auto;
+        /* Education bilesenleri ayarlari */
+        #education-content {
+            position: absolute;
+            z-index: 1;
+            display: none;
+            margin-top: 15px;
+            margin-left: -15px;
+            padding-right: 100px;
+        }
 
+        .education-li:hover #education-content {
+            display: block;
         }
 
         /* Ana yerlesim alani icin Flexbox kullanimi */
@@ -115,6 +121,13 @@
         }
 
         /* Kart ve video boyutlari */
+         .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+
+        }
         .card {
             background-color: #f2f2f2;
             padding: 20px;
@@ -140,6 +153,7 @@
 
     <!-- Navigation Bar -->
     <ul>
+         <!-- Home -->
         <li><a href="https://html-odev-dxeo.vercel.app/"><i class="fa-solid fa-house"></i> Home</a></li>
 
         <!-- Accounts ve Bilesenleri -->
@@ -179,7 +193,20 @@
             </div>
         </li>
 
-        <li><a href="https://www.youtube.com/" target="_blank"><i class="fa-solid fa-diagram-project"></i> Projects</a></li>
+        <!--Education ve Bilesenleri-->
+        <li class="education-li"><a href="#" target="_blank"><i class="fa-solid fa-atom"></i> Education</a>
+            <div id="education-content">
+                <ul style="width: 213px;">
+                    <li style="display: block; margin-right: 0px; margin-left: -40px;"><a
+                            href="https://www.w3schools.com/" target="_blank">W3Schools</a>
+                    </li>
+
+                    <li style="display: block; margin-right: 0px; margin-left: -40px"><a
+                            href="https://www.youtube.com/?app=desktop&hl=tr" target="_blank">YouTube</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
     </ul>
 
     <!-- Resimlerin bulundugu cardlar -->
